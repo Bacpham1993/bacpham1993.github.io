@@ -10345,6 +10345,7 @@ h1, h2, h3, h4, h5,
   box-shadow: 0px 42px 29px -31px rgba(0, 0, 0, 0.05);
 }
 .project img {
+  height: 200px;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -o-transform: scale(1);

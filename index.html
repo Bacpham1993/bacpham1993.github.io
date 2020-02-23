@@ -29,27 +29,9 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
-	<!-- Facebook Pixel Code -->
-<script>
-	!function(f,b,e,v,n,t,s)
-	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-	n.queue=[];t=b.createElement(e);t.async=!0;
-	t.src=v;s=b.getElementsByTagName(e)[0];
-	s.parentNode.insertBefore(t,s)}(window, document,'script',
-	'https://connect.facebook.net/en_US/fbevents.js');
-	fbq('init', '159948365430624');
-	fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-	src="https://www.facebook.com/tr?id=159948365430624&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Facebook Pixel Code -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">
@@ -81,7 +63,6 @@
 	        <div class="container-fluid p-0">
 	          <div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
 				  <div class="one-third order-md-last img js-fullheight" style="background-image:url('images/clinical_case/tapthe1.png');">
-					<!-- <img src="images/clinical_case/tapthekhoactch1.jpeg" -->
 	          		<div class="overlay"></div>
 	          	</div>
 		          <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
@@ -118,7 +99,6 @@
 	      </div>
 	    </div>
     </section>
-		
 
     <!-- <section class="ftco-section ftco-no-pb ftco-no-pt ftco-services bg-light" id="services-section">
       <div class="container">
@@ -249,13 +229,13 @@
     		</div>
     	</div>
     </section>
-
+<div id="wrapper">
     <section class="ftco-section ftco-project bg-light" id="projects-section">
     	<div class="container px-md-5">
     		<div class="row justify-content-center pb-5">
           <div class="col-md-12 heading-section text-center ftco-animate">
           	<span class="subheading">THÀNH QUẢ</span>
-            <h2 class="mb-4">CÁC CA MỔ</h2>
+            <h2 class="mb-4">CÁC CA PHẪU THUẬT</h2>
             <p>Thực hiện các ca mổ từ đơn giản đến phức tạp sánh ngang với các trung tâm chấn thương chỉnh hình lớn</p>
           </div>
         </div>
@@ -265,7 +245,7 @@
             	<div class="item">
             		<div class="project">
 		    					<div class="img">
-				    				<img src="images/clinical_case/mo1.jpg" class="img-fluid" alt="Colorlib Template">
+				    				<img src="images/clinical_case/mo1.jpg" >
 				    				<div class="text px-4">
 				    					<h3><a href="#">Nối thành công đốt ngón tay bị đứt lìa</a></h3>
 				    					<span>BS.CKI Nguyễn Quốc Lữ</span>
@@ -273,21 +253,10 @@
 			    				</div>
 		    				</div>
             	</div>
-            	<!-- <div class="item">
-            		<div class="project">
-		    					<div class="img">
-				    				<img src="images/clinical_case/thay1.jpeg" class="img-fluid" alt="Colorlib Template">
-				    				<div class="text px-4">
-				    					<h3><a href="#">Mổ 2</a></h3>
-				    					<span></span>
-				    				</div>
-			    				</div>
-		    				</div>
-            	</div> -->
             	<div class="item">
             		<div class="project">
 		    					<div class="img">
-				    				<img src="images/clinical_case/thay4.jpeg" class="img-fluid" alt="Colorlib Template">
+				    				<img src="images/clinical_case/thay4.jpeg" >
 				    				<div class="text px-4">
 				    					<h3><a href="#">Mổ 3</a></h3>
 				    					<span></span>
@@ -298,7 +267,7 @@
             	<div class="item">
             		<div class="project">
 		    					<div class="img">
-				    				<img src="images/clinical_case/thay5.jpeg" class="img-fluid" alt="Colorlib Template">
+				    				<img src="images/clinical_case/thay5.jpeg" >
 				    				<div class="text px-4">
 				    					<h3><a href="#">Mổ 4</a></h3>
 				    					<span></span>
@@ -309,7 +278,7 @@
             	<div class="item">
             		<div class="project">
 		    					<div class="img">
-				    				<img src="images/clinical_case/mobenhnhan2.jpg" class="img-fluid" alt="Colorlib Template">
+				    				<img src="images/clinical_case/mobenhnhan2.jpg"  >
 				    				<div class="text px-4">
 				    					<h3><a href="#">Mổ 5</a></h3>
 				    					<span></span>
@@ -320,7 +289,7 @@
             	<div class="item">
             		<div class="project">
 		    					<div class="img">
-				    				<img src="images/clinical_case/mobenhnhan3.jpg" class="img-fluid" alt="Colorlib Template">
+				    				<img src="images/clinical_case/mobenhnhan3.jpg" >
 				    				<div class="text px-4">
 				    					<h3><a href="#">Mổ </a></h3>
 				    					<span></span>
@@ -344,7 +313,29 @@
 			  </div>
 			</div>
 			<div class="row">
-					<div class="col-md-12 col-lg-12 ftco-animate">
+					<div v-for="(doctor, index) in doctors" :class="index === 0 ? 'col-md-12 col-lg-12 ftco-animate' : 'col-md-6 col-lg-4 ftco-animate'">	
+							<div class="staff">
+									<div class="img-wrap d-flex align-items-stretch">
+										<div class="img align-self-stretch" :style="index === 0 ? 'background-image: url(http://bvthongnhatdn.vn/Portals/0/Images/bstruongkhoactch.jpeg)' : 'background-image: url(images/logo.png)'"></div>
+									</div>
+									<div class="text d-flex align-items-center pt-3 text-center">
+										<div>
+											<h3 class="mb-2">{{ doctor.name }}</h3>
+											<span class="position mb-3">{{ doctor.grade }}</span>
+											<a href="tel:0918095900"><button class="btn btn-success mb-3">Đặt lịch khám</button></a>
+											<div class="faded">
+									<ul class="ftco-social text-center">
+									<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+									<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+									<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+									<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+								  </ul>
+							  </div>
+							</div>
+									</div>
+								</div>
+					</div>
+					<!-- <div class="col-md-12 col-lg-12 ftco-animate">
 							<div class="staff">
 								<div class="img-wrap d-flex align-items-stretch">
 									<div class="img align-self-stretch" style="background-image: url('http://bvthongnhatdn.vn/Portals/0/Images/bstruongkhoactch.jpeg');"></div>
@@ -586,6 +577,94 @@
 		</div>
 	</div>
 </div>
+<div class="col-md-6 col-lg-4 ftco-animate">
+	<div class="staff">
+		<div class="img-wrap d-flex align-items-stretch">
+			<div class="img align-self-stretch" style="background-image: url(images/logo.png);"></div>
+		</div>
+		<div class="text d-flex align-items-center pt-3 text-center">
+			<div>
+				<h3 class="mb-2">BS. Ngô Thị Ninh</h3>
+				<span class="position mb-3">Bác sĩ điều trị</span>
+				<a href="tel:0918095900"><button class="btn btn-success mb-3">Đặt lịch khám</button></a>
+				<div class="faded">
+					<ul class="ftco-social text-center">
+		<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+		<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+		<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+		<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+	  </ul>
+  </div>
+</div>
+		</div>
+	</div>
+</div>
+<div class="col-md-6 col-lg-4 ftco-animate">
+	<div class="staff">
+		<div class="img-wrap d-flex align-items-stretch">
+			<div class="img align-self-stretch" style="background-image: url(images/logo.png);"></div>
+		</div>
+		<div class="text d-flex align-items-center pt-3 text-center">
+			<div>
+				<h3 class="mb-2">BS. Lê Thế Giới</h3>
+				<span class="position mb-3">Bác sĩ điều trị</span>
+				<a href="tel:0918095900"><button class="btn btn-success mb-3">Đặt lịch khám</button></a>
+				<div class="faded">
+					<ul class="ftco-social text-center">
+		<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+		<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+		<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+		<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+	  </ul>
+  </div>
+</div>
+		</div>
+	</div>
+</div>
+<div class="col-md-6 col-lg-4 ftco-animate">
+	<div class="staff">
+		<div class="img-wrap d-flex align-items-stretch">
+			<div class="img align-self-stretch" style="background-image: url(images/logo.png);"></div>
+		</div>
+		<div class="text d-flex align-items-center pt-3 text-center">
+			<div>
+				<h3 class="mb-2">BS. Phạm Trung Bắc</h3>
+				<span class="position mb-3">Bác sĩ điều trị</span>
+				<a href="tel:0918095900"><button class="btn btn-success mb-3">Đặt lịch khám</button></a>
+				<div class="faded">
+					<ul class="ftco-social text-center">
+		<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+		<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+		<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+		<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+	  </ul>
+  </div>
+</div>
+		</div>
+	</div>
+</div>
+<div class="col-md-6 col-lg-4 ftco-animate">
+	<div class="staff">
+		<div class="img-wrap d-flex align-items-stretch">
+			<div class="img align-self-stretch" style="background-image: url(images/logo.png);"></div>
+		</div>
+		<div class="text d-flex align-items-center pt-3 text-center">
+			<div>
+				<h3 class="mb-2">BS. Trương Quang Hải</h3>
+				<span class="position mb-3">Bác sĩ điều trị</span>
+				<a href="tel:0918095900"><button class="btn btn-success mb-3">Đặt lịch khám</button></a>
+				<div class="faded">
+					<ul class="ftco-social text-center">
+		<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+		<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+		<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+		<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+	  </ul>
+  </div>
+</div>
+		</div>
+	</div>
+</div> -->
 					</div>
 			</div>
 		</section>
@@ -682,7 +761,7 @@
 		          <div class="counter-wrap ftco-animate d-flex mt-md-3">
 	              <div class="text p-4 bg-warning">
 	              	<p class="mb-0">
-		                <span class="number" data-number="10">0</span>
+		                <span class="number" data-number="12">0</span>
 		                <span>NĂM THÀNH LẬP</span>
 	                </p>
 	              </div>
@@ -691,7 +770,8 @@
 	        </div>
         </div>
     	</div>
-    </section>
+	</section>
+</div>
 
     <!-- <section class="ftco-section bg-light" id="blog-section">
       <div class="container">
@@ -795,18 +875,6 @@
           </div>
         </div>
         <div class="row d-flex contact-info mb-1">
-          <!-- <div class="col-md-12 col-lg-12 d-flex mb-lg-2 ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-				  </div>
-				<div class="contact-detail">
-					<h3 class="mb-2">Địa chỉ</h3>
-					<p>Khoa CTCH & Bỏng, Bệnh Viện Đa Khoa Thống Nhất Tỉnh Đồng Nai 
-							Số 234 QLộ I, Phường Tân Biên, Biên Hòa, Đồng Nai </p>
-				</div>
-	          </div>
-          </div> -->
           <div class="col-md-4 col-lg-4 d-flex ftco-animate">
           	<div class="align-self-stretch box p-4 text-center">
           		<div class="icon d-flex align-items-center justify-content-center">
@@ -838,38 +906,6 @@
 	          </div>
           </div>
 		</div>
-        <!-- <div class="row no-gutters block-9">
-          <div class="col-md-12 order-md-last d-flex">
-            <form action="#" class="bg-light p-5 contact-form">
-				<div class="form-group">
-				<div class="col-md-12">
-						<h3 class="mb-4">GÓP Ý</h3>
-					<p>Vui lòng điền thông tin và gửi</p>
-				</div>
-				</div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Họ tên của bạn">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Địa chỉ Email">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Chủ đề">
-              </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Tin nhắn"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Gửi" class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
-          
-          </div>
-
-          <div class="col-md-6 d-flex">
-          	<div id="map" class="bg-white"></div>
-          </div>
-        </div> -->
       </div>
     </section>
 		
@@ -904,8 +940,79 @@
 
   <!-- loader -->
   <!-- <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div> -->
-
-
+  <script>
+		var app = new Vue({
+		  el: '#wrapper',
+		  data: {
+			  doctors: [
+				  {
+					  "name": "BS.CKII. Nguyễn Tường Quang",
+					  "grade": "Bác sĩ Trưởng Khoa",
+					  "img": "http://bvthongnhatdn.vn/Portals/0/Images/bstruongkhoactch.jpeg"
+				  },
+				  {
+					  "name": "BS.CKI. Nguyễn Quốc Lữ",
+					  "grade": "Bác sĩ Phó Khoa"
+				  },
+				  {
+					  "name": "BS.CKI. Trần Chí Hậu",
+					  "grade": "Bác sĩ điều trị"
+				  },
+				  {
+					  "name": "BS.CKI. Ngô Đăng Hoan",
+					  "grade": "Bác sĩ điều trị"
+				  },
+				  {
+					  "name": "BS.CKI. Đinh Tiên Vương",
+					  "grade": "Bác sĩ điều trị"
+				  },
+				  {
+					  "name": "BS.CKI. Nguyễn Tá Úy",
+					  "grade": "Bác sĩ điều trị"
+				  },
+				  {
+					  "name": "BS. Khổng Trần Trí",
+					  "grade": "Bác sĩ điều trị"
+				  },
+				  {
+					  "name": "BS. Nguyễn Đăng Vững",
+					  "grade": "Bác sĩ điều trị"
+				  },
+				  {
+					  "name": "BS. Trần Văn Khiêm",
+					  "grade": "Bác sĩ điều trị"
+				  },
+				  {
+					  "name": "BS. Triệu Văn Vũ",
+					  "grade": "Bác sĩ điều trị"
+				  },
+				  {
+					  "name": "BS. Tăng Khánh Hậu",
+					  "grade": "Bác sĩ điều trị"
+				  },
+				  {
+					  "name": "BS. Ngô Thị Ninh",
+					  "grade": "Bác sĩ điều trị"
+				  },
+				  {
+					  "name": "BS. Lê Thế Giới",
+					  "grade": "Bác sĩ điều trị"
+				  },
+				  {
+					  "name": "BS. Phạm Trung Bắc",
+					  "grade": "Bác sĩ điều trị"
+				  },
+				  {
+					  "name": "BS. Trương Quang Hải",
+					  "grade": "Bác sĩ điều trị"
+				  }
+  
+				  
+			  ]
+		  }
+		  })
+	</script>
+ 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -919,31 +1026,32 @@
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="js/main.js"></script>
-    <!-- Load Facebook SDK for JavaScript -->
-<div id="fb-root"></div>
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      xfbml            : true,
-      version          : 'v3.3'
-    });
-  };
+   <!-- Load Facebook SDK for JavaScript -->
+   <div id="fb-root"></div>
+   <script>
+	 window.fbAsyncInit = function() {
+	   FB.init({
+		 xfbml            : true,
+		 version          : 'v6.0'
+	   });
+	 };
 
-  (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+	 (function(d, s, id) {
+	 var js, fjs = d.getElementsByTagName(s)[0];
+	 if (d.getElementById(id)) return;
+	 js = d.createElement(s); js.id = id;
+	 js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+	 fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));</script>
 
-<!-- Your customer chat code -->
-<div class="fb-customerchat"
-  attribution=setup_tool
-  page_id="378879332739578"
-  theme_color="#67b868"
-  logged_in_greeting="Xin chào! Chúng tôi có thể giúp gì được cho bạn?"
-  logged_out_greeting="Xin chào! Chúng tôi có thể giúp gì được cho bạn?">
-</div>
-  </body>
+   <!-- Your customer chat code -->
+   <div class="fb-customerchat"
+	 attribution=setup_tool
+	 page_id="378879332739578"
+theme_color="#67b868"
+logged_in_greeting="Xin chào! Chúng tôi sẽ giải đáp thắc mắc cho bạn :)"
+logged_out_greeting="Xin chào! Chúng tôi sẽ giải đáp thắc mắc cho bạn :)">
+   </div>
+  
+</body>
 </html>
