@@ -10948,7 +10948,7 @@ textarea.form-control {
   background: -webkit-linear-gradient(-45deg, #9ff669 0%, #31de79 100%);
   background: -o-linear-gradient(-45deg, #9ff669 0%, #31de79 100%);
   background: -ms-linear-gradient(-45deg, #9ff669 0%, #31de79 100%);
-  background: linear-gradient(135deg, #9ff669 0%, #31de79 100%);
+  background: linear-gradient(135deg, #f66969 0%, #de3131 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#9ff669", endColorstr="#31de79", GradientType=1 );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
