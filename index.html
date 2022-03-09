@@ -7,7 +7,7 @@
     <meta name="robots" content="index,follow" />
     <meta property="fb:pages" content="378879332739578" />
     <meta name="revisit-after" content="1days" /> 
-    <meta name="description" content="Khoa Chấn thương chỉnh hình & Bỏng, BV Thống Nhất Đồng Nai - bệnh viện Thánh Tâm, là khoa chuyên về chấn thương và chỉnh hình mạnh nhất tỉnh Đồng Nai"/>
+    <meta name="description" content="Khoa Chấn thương chỉnh hình & Bỏng BV Thống Nhất Đồng Nai - bệnh viện Thánh Tâm là khoa chuyên về chấn thương và chỉnh hình mạnh nhất tỉnh Đồng Nai với đội ngũ y bác sĩ giỏi nhiều năm kinh nghiệm"/>
     <meta name="keywords" content="khoa chan thuong chinh hinh dong nai, benh vien thanh tam, benh vien thong nhat dong nai, chinh hinh, chan thuong, trat khop, chinh truc, phau thuat"/>
     <meta property="og:title" content="KHOA CHẤN THƯƠNG CHỈNH HÌNH & BỎNG | BV THỐNG NHẤT ĐỒNG NAI"/>
     <meta property="og:description" content="Khoa Chấn thương chỉnh hình & Bỏng - BV Thống Nhất Đồng Nai"/>
@@ -345,8 +345,7 @@
 
             <p>
 				<i class="icon-heart color-danger" aria-hidden="true"></i>
-					Bản quyền &copy;
-					<script>document.write(new Date().getFullYear());</script> thuộc KHOA CTCH & Bỏng | BV Thống Nhất Đồng Nai 
+					Bản quyền &copy; {{ currentYearONE }} thuộc KHOA CTCH & Bỏng | BV Thống Nhất Đồng Nai 
 			<i class="icon-heart color-danger" aria-hidden="true"></i>
             </p>
           </div>
@@ -362,6 +361,7 @@
 		var app = new Vue({
 		  el: '#wrapper',
 		  data: {
+			  currentYearONE: new Date().getFullYear(),
 			  currentYear: new Date().getFullYear() - 2008,
 			  doctors: [
 				  {
