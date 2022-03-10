@@ -494,7 +494,6 @@
 			},
 			watch: {
 				popularPosts: function(res,res2) {
-					console.log(res.length, res2.length,this)
 					setTimeout(() => {
 						if(res2.length === this.loaded){
 						$('.carousel-testimony').owlCarousel({
@@ -526,7 +525,7 @@
 				}
 			},
 			mounted () {
-				let token = "EAAG78HSZAD3ABAFk4zZA7DizGNqX1JmtRCSxZC5y8F8dvhLcTQBI30YcnTZCtiqC9tWXBEg2ciLQaZCcu8GRzMrZCrigxYlJbvBU4RFgZCimQUOeeoZAyZBZAXJJ5fiQ4p6yk5EtEDygHLaj7QZB4HgcKLUyEgzKNsCw1bijF3hnBwLOexpiGLZBe2qvmJ2dMIiF8o2pPJWes08FvAZDZD";
+				let token = "EAAG78HSZAD3ABAA2kK7amsoS1JOZCRr3hmPZBPujpW44jsvXahrMBxnZAyv4Rb4qQEvbXbzhbJftqhfM2MZCodYwWRNTXdcvxQStfy8wbqPSvt57pcBGWizgA3xMERzAsgkMC1KhSE7i18WVRruRCnmYNNxa4yDYRZB2BHFZA5zJreUMrTSJ95G3n60A4SdPmIZD";
 				let pageid = "378879332739578";
 				let postid = ["455445485082962","526457371315106","344745583256326"];
 				for(let i = 0; i < postid.length; i++) {
@@ -534,7 +533,6 @@
 					.then(resp => {
 						axios.get(`https://graph.facebook.com/v13.0/${pageid}_${postid[i]}/attachments?access_token=${token}`)
 						.then(resp2 =>{
-							console.log(resp.data)
 							let tempData = {
 							"url": resp2.data.data[0].url,
 							"message": resp.data.message,
