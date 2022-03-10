@@ -13,7 +13,7 @@
     <meta property="og:description" content="Khoa Chấn thương chỉnh hình & Bỏng - BV Thống Nhất Đồng Nai"/>
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="http://www.chinhhinhdongnai.info/images/logo.png" />
-    <link rel="shortcut icon" href="images/flavicon.ico" />
+	<link rel="icon" href="/images/flavicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
@@ -30,7 +30,8 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
@@ -53,6 +54,7 @@
 	      </div>
 	    </div>
 	  </nav>
+<div id="wrapper">
 	  <section id="home-section" class="hero">
 	  	<h3 class="vr">KHOA CHẤN THƯƠNG CHỈNH HÌNH & BỎNG</h3>
 		  <div class="home-slider js-fullheight owl-carousel">
@@ -141,7 +143,7 @@
     		</div>
     	</div>
     </section>
-<div id="wrapper">
+
     <section class="ftco-section ftco-project bg-light" id="projects-section">
     	<div class="container px-md-5">
     		<div class="row justify-content-center pb-5">
@@ -214,7 +216,37 @@
     		</div>
     	</div>
 	</section>
-	
+	<!-- popular posts  -->
+	<section class="ftco-section testimony-section" id="testimony-section">
+		<div class="container">
+		  <div class="row justify-content-center pb-3">
+			<div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+			  <h2 class="mb-4">BÀI VIẾT NỔI BẬT</h2>
+			</div>
+		  </div>
+		  <div class="row ftco-animate justify-content-center">
+			<div class="col-md-12"  v-if="popularPosts.length > 0">
+			  <div class="carousel-testimony owl-carousel ftco-owl">
+				<div class="item" v-for="popularPost in popularPosts">
+				  <div class="testimony-wrap text-center py-4 pb-5">
+					<div class="user-img" :style="'background-image: url(' + popularPost.image + ')'">
+					  <span class="quote d-flex align-items-center justify-content-center">
+						<i class="icon-quote-left"></i>
+					  </span>
+					</div>
+					<div class="text px-4 pb-5">
+					  <p class="mb-4 text-popularPost">{{ popularPost.message }}</p>
+					  <p class="name"><a :href="popularPost.url" target="_blank"><button class="btn btn-danger">Tìm hiểu thêm</button></a></p>
+					  <!-- <span class="position">{{ popularPost.url }}</span> -->
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	<!-- end popular posts -->
 	<section class="ftco-section doctor-section" id="doctor-section">
 			<div class="container">
 				<div class="row justify-content-center pb-2">
@@ -282,7 +314,7 @@
         </div>
     	</div>
 	</section>
-</div>
+
 
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
@@ -353,120 +385,180 @@
       </div>
     </footer>
     
-  
-
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
   <!-- loader -->
   <!-- <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div> -->
-  <script>
-		var app = new Vue({
-		  el: '#wrapper',
-		  data: {
-			  currentYearONE: new Date().getFullYear(),
-			  currentYear: new Date().getFullYear() - 2008,
-			  doctors: [
-				  {
-					  "name": "BS.CKII. Nguyễn Tường Quang",
-					  "grade": "Bác sĩ Trưởng Khoa",
-					  "img": "bsquang",
-					  "phone": "0918095900"
-				  },
-				  {
-					  "name": "BS.CKI. Nguyễn Quốc Lữ",
-					  "grade": "Bác sĩ Phó Khoa",
-					  "img": "bslu",
-					  "phone": "0976770469"
-				  },
-				  {
-					  "name": "BS.CKI. Trần Chí Hậu",
-					  "grade": "Bác sĩ điều trị",
-					  "img": "bshaua",
-					  "phone": "0986999312"
-				  },
-				  {
-					  "name": "BS.CKI. Ngô Đăng Hoan",
-					  "grade": "Bác sĩ điều trị",
-					  "img": "bshoan",
-					  "phone": "0983225825"
-				  },
-				  {
-					  "name": "BS.CKI. Đinh Tiên Vương",
-					  "grade": "Bác sĩ điều trị",
-					  "img": "bsvuong",
-					  "phone": "0374705687"
-				  },
-				  {
-					  "name": "BS.CKI. Nguyễn Tá Úy",
-					  "grade": "Bác sĩ điều trị",
-					  "img": "bsuy",
-					  "phone": "0979325741"
-				  },
-				  {
-					  "name": "BS.CKI. Nguyễn Đăng Vững",
-					  "grade": "Bác sĩ điều trị",
-					  "img": "bsvung",
-					  "phone": "0705912421"
-				  },
-				  {
-					  "name": "BS. Khổng Trần Trí",
-					  "grade": "Bác sĩ điều trị",
-					  "img": "bstri",
-					  "phone": "0784909190"
-				  },
-				  {
-					  "name": "BS. Trần Văn Khiêm",
-					  "grade": "Bác sĩ điều trị",
-					  "img": "bskhiem",
-					  "phone": "0368431241"
-				  },
-				  {
-					  "name": "BS. Triệu Văn Vũ",
-					  "grade": "Bác sĩ điều trị",
-					  "img": "bsvu",
-					  "phone": "0944538588"
-				  },
-				  {
-					  "name": "BS. Tăng Khánh Hậu",
-					  "grade": "Bác sĩ điều trị",
-					  "img": "bshaue",
-					  "phone": "0968766445"
-				  },
-				  {
-					  "name": "BS. Ngô Thị Ninh",
-					  "grade": "Bác sĩ điều trị",
-					  "img": "bsninh",
-					  "phone": "0398665414"
-				  },
-				  {
-					  "name": "BS. Lê Thế Giới",
-					  "grade": "Bác sĩ điều trị",
-					  "img": "bsgioi",
-					  "phone": "0899882899"
-				  },
-				  {
-					  "name": "BS. Phạm Trung Bắc",
-					  "grade": "Bác sĩ điều trị",
-					  "img": "bsbac",
-					  "phone": "0899363999"
-				  },
-				  {
-					  "name": "BS. Trương Quang Hải",
-					  "grade": "Bác sĩ điều trị",
-					  "img": "bshai",
-					  "phone": "0352210543"
-				  }			  
-			  ]
-		  }
-		  })
-	</script>
+<script type="text/JavaScript">
+	var app = new Vue({
+			el: '#wrapper',
+			data: {
+				loaded: 0,
+				popularPosts: new Array(),
+				currentYearONE: new Date().getFullYear(),
+				currentYear: new Date().getFullYear() - 2008,
+				doctors: [
+					{
+						"name": "BS.CKII. Nguyễn Tường Quang",
+						"grade": "Bác sĩ Trưởng Khoa",
+						"img": "bsquang",
+						"phone": "0918095900"
+					},
+					{
+						"name": "BS.CKI. Nguyễn Quốc Lữ",
+						"grade": "Bác sĩ Phó Khoa",
+						"img": "bslu",
+						"phone": "0976770469"
+					},
+					{
+						"name": "BS.CKI. Trần Chí Hậu",
+						"grade": "Bác sĩ điều trị",
+						"img": "bshaua",
+						"phone": "0986999312"
+					},
+					{
+						"name": "BS.CKI. Ngô Đăng Hoan",
+						"grade": "Bác sĩ điều trị",
+						"img": "bshoan",
+						"phone": "0983225825"
+					},
+					{
+						"name": "BS.CKI. Đinh Tiên Vương",
+						"grade": "Bác sĩ điều trị",
+						"img": "bsvuong",
+						"phone": "0374705687"
+					},
+					{
+						"name": "BS.CKI. Nguyễn Tá Úy",
+						"grade": "Bác sĩ điều trị",
+						"img": "bsuy",
+						"phone": "0979325741"
+					},
+					{
+						"name": "BS.CKI. Nguyễn Đăng Vững",
+						"grade": "Bác sĩ điều trị",
+						"img": "bsvung",
+						"phone": "0705912421"
+					},
+					{
+						"name": "BS. Khổng Trần Trí",
+						"grade": "Bác sĩ điều trị",
+						"img": "bstri",
+						"phone": "0784909190"
+					},
+					{
+						"name": "BS. Trần Văn Khiêm",
+						"grade": "Bác sĩ điều trị",
+						"img": "bskhiem",
+						"phone": "0368431241"
+					},
+					{
+						"name": "BS. Triệu Văn Vũ",
+						"grade": "Bác sĩ điều trị",
+						"img": "bsvu",
+						"phone": "0944538588"
+					},
+					{
+						"name": "BS. Tăng Khánh Hậu",
+						"grade": "Bác sĩ điều trị",
+						"img": "bshaue",
+						"phone": "0968766445"
+					},
+					{
+						"name": "BS. Ngô Thị Ninh",
+						"grade": "Bác sĩ điều trị",
+						"img": "bsninh",
+						"phone": "0398665414"
+					},
+					{
+						"name": "BS. Lê Thế Giới",
+						"grade": "Bác sĩ điều trị",
+						"img": "bsgioi",
+						"phone": "0899882899"
+					},
+					{
+						"name": "BS. Phạm Trung Bắc",
+						"grade": "Bác sĩ điều trị",
+						"img": "bsbac",
+						"phone": "0899363999"
+					},
+					{
+						"name": "BS. Trương Quang Hải",
+						"grade": "Bác sĩ điều trị",
+						"img": "bshai",
+						"phone": "0352210543"
+					}			  
+				]
+			},
+			watch: {
+				popularPosts: function(res,res2) {
+					console.log(res.length, res2.length,this)
+					setTimeout(() => {
+						if(res2.length === this.loaded){
+						$('.carousel-testimony').owlCarousel({
+						autoplay: true,
+						autoHeight: true,
+						center: true,
+						loop: true,
+						items:1,
+						margin: 30,
+						stagePadding: 0,
+						nav: false,
+						dots: true,
+						navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+						responsive:{
+							0:{
+								items: 1
+							},
+							600:{
+								items: 2
+							},
+							1000:{
+								items: 3
+							}
+						}
+					});
+					}
+					}, 100);
+					
+				}
+			},
+			mounted () {
+				let token = "EAAG78HSZAD3ABAPqRhyid8TZAXfHO2LnnL1ZCpedYUzyzKAuLStjCBzprmVhnoZCi0jl2pUSspbTRxZCjTHAEaXyMwcSRbKQ39Dl7Di0KALHUxEHQ4TRTo7BjvS1C5U3RhBMYOeGhXf5Ue2adh1P3c5ZB2QTEWgQmUqCKoZAFqPk3hDDt0KlUsUXOh0OH0pb1qZCPifG4f1gZBgZDZD";
+				let pageid = "378879332739578";
+				let postid = ["455445485082962","526457371315106","344745583256326"];
+				for(let i = 0; i < postid.length; i++) {
+					axios.get(`https://graph.facebook.com/v13.0/${pageid}_${postid[i]}?access_token=${token}`)
+					.then(resp => {
+						axios.get(`https://graph.facebook.com/v13.0/${pageid}_${postid[i]}/attachments?access_token=${token}`)
+						.then(resp2 =>{
+							console.log(resp.data)
+							let tempData = {
+							"url": resp2.data.data[0].url,
+							"message": resp.data.message,
+							"image": resp2.data.data[0].media.image.src
+							}
+						this.popularPosts.push(tempData);
+						})
+					});
+				}
+				this.loaded = postid.length;
+				console.log(this.loaded);
+			},
+			methods: {
+			}
+		})
+</script>
  
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.easing.1.3.js"></script>
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
+
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
@@ -490,13 +582,12 @@
 	 fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));</script>
 
-   <!-- Your customer chat code -->
    <div class="fb-customerchat"
 	 attribution=setup_tool
 	 page_id="378879332739578"
 theme_color="#67b868"
-logged_in_greeting="Xin chào! Chúng tôi sẽ giải đáp thắc mắc cho bạn :)"
-logged_out_greeting="Xin chào! Chúng tôi sẽ giải đáp thắc mắc cho bạn :)">
+logged_in_greeting="Xin chào! Hãy đặt câu hỏi cho khoa nhé!"
+logged_out_greeting="Xin chào! Chúc bạn một ngày làm việc vui vẻ!">
    </div>
   
 </body>

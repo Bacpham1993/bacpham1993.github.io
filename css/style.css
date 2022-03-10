@@ -10788,7 +10788,7 @@ textarea.form-control {
   font-size: 24px;
 }
 .ftco-section {
-  padding: 4em 0;
+  padding: 2em 0;
   position: relative;
 }
 @media (max-width: 767.98px) {
@@ -11093,8 +11093,8 @@ textarea.form-control {
   color: rgba(0, 0, 0, 0.7);
 }
 .testimony-wrap .user-img {
-  width: 130px;
-  height: 130px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   position: relative;
   margin: 0 auto;
@@ -11132,9 +11132,17 @@ textarea.form-control {
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   border-radius: 4px;
+  height:330px;
   -webkit-box-shadow: 0px 42px 29px -31px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0px 42px 29px -31px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 42px 29px -31px rgba(0, 0, 0, 0.05);
+}
+.testimony-wrap .text .text-popularPost {
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 8.0em;
+  line-height: 1.6em;
 }
 .testimony-wrap p {
   font-size: 20px;
@@ -11142,7 +11150,11 @@ textarea.form-control {
 .testimony-wrap .name {
   font-weight: 400;
   font-size: 20px;
-  margin-bottom: 0;
+  left:0;
+  right:0;
+  position: absolute;
+  bottom: 60px;
+  /* margin-bottom: 0; */
   color: #000000;
 }
 .testimony-wrap .position {
